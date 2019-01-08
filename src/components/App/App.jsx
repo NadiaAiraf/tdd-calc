@@ -15,7 +15,8 @@
 // export default App;
 
 import React from 'react';
+import './App.css';
 
-const App = () => <div className="app-container" />;
+const App = () => <div className="app-container">hello world</div>;
 
 export default App;
