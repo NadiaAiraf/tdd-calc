@@ -20,7 +20,7 @@ import Calculator from '../Calculator/Calculator';
 
 const App = () => (
   <div className="app-container">
-    this is my calculator: <Calculator />
+    <Calculator />
   </div>
 );
 

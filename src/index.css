@@ -1,6 +1,18 @@
 
 :root {
+  --calculator-background-color: #123;
+  --calculator-color: #cba;
+  
   --main-font: 'Orbitron', sans-serif;
+  
+  --calculator-height: 72%;
+  --calculator-width: 36%;
+  
+}
+
+@media screen and (max-width: 1024px) {
+  --calculator-height: 100%;
+  --calculator-width: 100%;
 }
 
 body, div, p {
