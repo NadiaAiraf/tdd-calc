@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import './Calculator.css';
+import Display from '../Display/Display';
 
 class Calculator extends Component {
-  state = {
-    displayValue: '0',
-    numbers: [],
-    operators: [],
-    selecterOperator: '',
-    storeValue: '',
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayValue: '0',
+      numbers: [],
+      operators: [],
+      selecterOperator: '',
+      storeValue: '',
+    }
   }
   
   callOperator() {
@@ -24,7 +28,9 @@ class Calculator extends Component {
   
   render() {
     return(
-      <div className="calc-container">Calculator</div>
+      <div className="calc-container">
+        <Display displayValue={ this.state.displayValue }/>
+      </div>
     )
   }
 }
