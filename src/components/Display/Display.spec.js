@@ -17,4 +17,8 @@ describe('Display', () => {
     wrapper.setProps({displayValue: 'test'});
     expect(wrapper.text()).toEqual('test');
   })
+  
+  it('should render correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
 })
