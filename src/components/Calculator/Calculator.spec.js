@@ -26,4 +26,6 @@ describe ('Calculator', () => {
       />
     ])).toEqual(true)
   })
+  
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 });
