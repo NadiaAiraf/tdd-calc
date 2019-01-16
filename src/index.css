@@ -26,10 +26,15 @@
   
   --key-text-color: #d3d3d3;
   --key-text-weight: 700;
+  --key-text-size: 2em;
+  
+  --submit-key-color: #d142a3;
+  --submit-key-color-hover: #976543
 }
 
 @media screen and (max-width: 1024px) {
   --display-text-size: 10em;
+  --key-text-size: 6em;
   
   --calculator-height: 100%;
   --calculator-width: 100%;
