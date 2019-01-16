@@ -17,6 +17,15 @@
   
   --keypad-height: 72%;
   --keypad-width: 96%;
+  
+  --action-key-color: #234563;
+  --action-key-color-hover: #654325;
+  
+  --number-key-color: #696969;
+  --number-key-color-hover: #3f3f3f;
+  
+  --key-text-color: #d3d3d3;
+  --key-text-weight: 700;
 }
 
 @media screen and (max-width: 1024px) {
