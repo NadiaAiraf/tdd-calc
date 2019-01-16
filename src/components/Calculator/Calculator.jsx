@@ -8,8 +8,8 @@ class Calculator extends Component {
     super(props);
     this.state = {
       displayValue: '0',
-      numbers: [],
-      operators: [],
+      numbers: ['0','1','2','3','4','5','6','7','8','9'],
+      operators: ['/','x','-','+'],
       selecterOperator: '',
       storeValue: '',
     }
