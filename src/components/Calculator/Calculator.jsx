@@ -24,10 +24,20 @@ class Calculator extends Component {
   }
   
   updateDisplay = (value) => {
-    console.log(value)
     let displayString = this.state.displayValue;
-    displayString == '0' ? displayString = value : displayString += value
-    this.setState({ displayValue: displayString })
+
+    if (value == '.' && displayString.includes('.')) value = '';  
+    
+    if (value == 'ce') {
+      this.setState({
+        storeValue: '',
+        displayValue: '0',
+        selecterOperator: '',
+      })
+    } else {
+      displayString == '0' ? displayString = value : displayString += value
+      this.setState({ displayValue: displayString })
+    }
   }
   
   render() {

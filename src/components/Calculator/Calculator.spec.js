@@ -78,4 +78,24 @@ describe('updateDisplay', () => {
     wrapper.instance().updateDisplay('0')
     expect(wrapper.state('displayValue')).toEqual('50')
   })
+  
+  it('removes leading 0 from displayValue', () => {
+    wrapper.instance().updateDisplay('0')
+    wrapper.instance().updateDisplay('5')
+    expect(wrapper.state('displayValue')).toEqual('5')
+  })
+  
+  it('prevent multiple instances of .', () => {
+    wrapper.instance().updateDisplay('.')
+    wrapper.instance().updateDisplay('.')
+    expect(wrapper.state('displayValue')).toEqual('.')
+  })
+  
+  it('ce clears the displayValue, setOperator & storedValue', () => {
+    wrapper.instance().updateDisplay('6')
+    wrapper.instance().updateDisplay('ce')
+    expect(wrapper.state('displayValue')).toEqual('0')
+    expect(wrapper.state('selecterOperator')).toEqual('')
+    expect(wrapper.state('storeValue')).toEqual('')
+  })
 })
