@@ -123,3 +123,18 @@ describe('setOperator', () => {
     expect(wrapper.state('displayValue')).toEqual('0');
   })
 });
+
+describe('callOperator', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<Calculator />);
+  });
+  
+  it('updates displayValue to the sum of storeValue and display value', () => {
+    wrapper.setState({ storeValue: '3'});
+    wrapper.setState({ displayValue: '2'});
+    wrapper.setState({ selecterOperator: '+'});
+    wrapper.instance().callOperator();
+    expect(wrapper.state('displayValue')).toEqual('5');
+  })
+})

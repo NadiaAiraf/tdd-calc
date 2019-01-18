@@ -42,7 +42,7 @@ ShallowWrapper {
           operators={
             Array [
               "/",
-              "x",
+              "*",
               "-",
               "+",
             ]
@@ -88,7 +88,7 @@ ShallowWrapper {
           ],
           "operators": Array [
             "/",
-            "x",
+            "*",
             "-",
             "+",
           ],
@@ -133,7 +133,7 @@ ShallowWrapper {
             operators={
               Array [
                 "/",
-                "x",
+                "*",
                 "-",
                 "+",
               ]
@@ -179,7 +179,7 @@ ShallowWrapper {
             ],
             "operators": Array [
               "/",
-              "x",
+              "*",
               "-",
               "+",
             ],

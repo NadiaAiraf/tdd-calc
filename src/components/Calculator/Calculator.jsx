@@ -16,7 +16,27 @@ class Calculator extends Component {
   }
   
   callOperator = () => {
-    console.log('call operation')
+    let displayString = parseInt(this.state.displayValue,10)
+    let oldValue = parseInt(this.state.storeValue,10)
+    
+    switch (this.state.selecterOperator) {
+      case '+':
+        displayString = oldValue + displayString;
+        break;
+      case '-':
+        displayString = oldValue - displayString;
+        break;
+      case '*':
+        displayString = oldValue * displayString;
+        break;
+      case '/':
+        displayString = oldValue / displayString;
+        break;
+      default:
+        displayString = 0;
+    }
+    
+    this.setState({ displayValue: displayString.toString() })
   }
   
   setOperator = (value) => {
