@@ -25,7 +25,6 @@ ShallowWrapper {
           callOperator={[Function]}
           numbers={
             Array [
-              "0",
               "1",
               "2",
               "3",
@@ -35,6 +34,9 @@ ShallowWrapper {
               "7",
               "8",
               "9",
+              "0",
+              ".",
+              "ce",
             ]
           }
           operators={
@@ -71,7 +73,6 @@ ShallowWrapper {
         "props": Object {
           "callOperator": [Function],
           "numbers": Array [
-            "0",
             "1",
             "2",
             "3",
@@ -81,6 +82,9 @@ ShallowWrapper {
             "7",
             "8",
             "9",
+            "0",
+            ".",
+            "ce",
           ],
           "operators": Array [
             "/",
@@ -112,7 +116,6 @@ ShallowWrapper {
             callOperator={[Function]}
             numbers={
               Array [
-                "0",
                 "1",
                 "2",
                 "3",
@@ -122,6 +125,9 @@ ShallowWrapper {
                 "7",
                 "8",
                 "9",
+                "0",
+                ".",
+                "ce",
               ]
             }
             operators={
@@ -158,7 +164,6 @@ ShallowWrapper {
           "props": Object {
             "callOperator": [Function],
             "numbers": Array [
-              "0",
               "1",
               "2",
               "3",
@@ -168,6 +173,9 @@ ShallowWrapper {
               "7",
               "8",
               "9",
+              "0",
+              ".",
+              "ce",
             ],
             "operators": Array [
               "/",
