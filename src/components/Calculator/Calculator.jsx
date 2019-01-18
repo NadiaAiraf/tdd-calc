@@ -9,7 +9,7 @@ class Calculator extends Component {
     this.state = {
       displayValue: '0',
       numbers: ['1','2','3','4','5','6','7','8','9','0','.','ce'],
-      operators: ['/','x','-','+'],
+      operators: ['/','*','-','+'],
       selecterOperator: '',
       storeValue: '',
     }
@@ -19,23 +19,27 @@ class Calculator extends Component {
     console.log('call operation')
   }
   
-  setOperator = () => {
-    console.log('set operation')
+  setOperator = (value) => {
+    this.setState({
+      selecterOperator: value,
+      storeValue: this.state.displayValue,
+      displayValue: '0',
+    })
   }
   
   updateDisplay = (value) => {
     let displayString = this.state.displayValue;
 
-    if (value == '.' && displayString.includes('.')) value = '';  
+    if (value === '.' && displayString.includes('.')) value = '';  
     
-    if (value == 'ce') {
+    if (value === 'ce') {
       this.setState({
         storeValue: '',
         displayValue: '0',
         selecterOperator: '',
       })
     } else {
-      displayString == '0' ? displayString = value : displayString += value
+      displayString === '0' ? displayString = value : displayString += value
       this.setState({ displayValue: displayString })
     }
   }

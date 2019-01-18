@@ -99,3 +99,27 @@ describe('updateDisplay', () => {
     expect(wrapper.state('storeValue')).toEqual('')
   })
 })
+
+describe('setOperator', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<Calculator />);
+  });
+  
+  it('updates the selecterOperator value', () => {
+    wrapper.instance().setOperator('+')
+    expect(wrapper.state('selecterOperator')).toEqual('+');
+  });
+  
+  it('updates the storedValue to be the current displayValue', () => {
+    wrapper.setState({ displayValue: '5' });
+    wrapper.instance().setOperator('+');
+    expect(wrapper.state('storeValue')).toEqual('5');
+  })
+  
+  it('resets the displayValue to 0', () => {
+    wrapper.setState({ displayValue: '5' });
+    wrapper.instance().setOperator('+');
+    expect(wrapper.state('displayValue')).toEqual('0');
+  })
+});
