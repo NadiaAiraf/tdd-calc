@@ -61,3 +61,21 @@ describe('mounted Calculator', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   })
 })
+
+describe('updateDisplay', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<Calculator />)
+  })
+  
+  it('updates the display value', () => {
+    wrapper.instance().updateDisplay('5')
+    expect(wrapper.state('displayValue')).toEqual('5');
+  })
+  
+  it('concatenates the displayValue', () => {
+    wrapper.instance().updateDisplay('5')
+    wrapper.instance().updateDisplay('0')
+    expect(wrapper.state('displayValue')).toEqual('50')
+  })
+})

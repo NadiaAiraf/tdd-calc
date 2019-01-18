@@ -23,8 +23,11 @@ class Calculator extends Component {
     console.log('set operation')
   }
   
-  updateDisplay = () => {
-    console.log('update display')
+  updateDisplay = (value) => {
+    console.log(value)
+    let displayString = this.state.displayValue;
+    displayString == '0' ? displayString = value : displayString += value
+    this.setState({ displayValue: displayString })
   }
   
   render() {
